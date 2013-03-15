@@ -52,3 +52,21 @@ func TestCarPositionComparison(t *testing.T) {
 		t.Errorf("Car b is beside a in this corner.")
 	}
 }
+
+func TestCarPositionSorting(t *testing.T) {
+	a = CarPosition{1, true,  3, 6}
+	b = CarPosition{1, true,  3, 4}
+	c = CarPosition{1, true,  3, 5}
+
+	d = CarPosition{1, false, 3, 5}
+	e = CarPosition{1, false, 3, 4}
+	f = CarPosition{1, false, 3, 3}
+
+	g = CarPosition{1, true,  2, 8}
+	h = CarPosition{1, true,  2, 8}
+	i = CarPosition{1, true,  2, 1}
+
+	j = CarPosition{1, false, 2, 2}
+	k = CarPosition{1, false, 2, 5}
+	m = CarPosition{1, false, 2, 9}
+}
