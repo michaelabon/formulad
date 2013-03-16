@@ -69,4 +69,13 @@ func TestCarPositionSorting(t *testing.T) {
 	j = CarPosition{1, false, 2, 2}
 	k = CarPosition{1, false, 2, 5}
 	m = CarPosition{1, false, 2, 9}
+
+    var positions = []CarPosition{a, b, c, d, e, f, g, h, i, j, k, m}
+	sort(&positions)
+
+	for i = 0; i < (len(positions) - 1); i++ {
+		if positions[i].compare(&positions[i+1]) > 0 {
+			t.Errorf("failed")  // Convert them to text somehow
+		}
+	}
 }
